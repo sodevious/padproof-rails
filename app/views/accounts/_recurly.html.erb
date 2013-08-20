@@ -1,0 +1,34 @@
+<script>
+  Recurly.config({
+    subdomain: 'recurlyjsdemo-test',
+    currency: 'USD',
+    country: 'US'
+  });
+
+  Recurly.buildTransactionForm({
+    target: '#recurly-transaction',
+    // Signature must be generated server-side with a utility method provided
+    // in client libraries.
+    signature: 'needs-server-support-code',
+    successURL: '/account/sign-up',
+    account: {
+      firstName: 'Joe',
+      lastName: 'User',
+      email: 'test@example.net',
+      phone: '555-555-5555',
+      companyName: 'Acme'
+    },
+    billingInfo: {
+      firstName: 'Joe',
+      lastName: 'User',
+      address1: '123 somestreet',
+      address2: '45',
+      city: 'San Francisco',
+      zip: '94107',
+      state: 'CA',
+      country: 'US',
+      cardNumber: '4111-1111-1111-1111',
+      CVV: '123'
+    }
+  });
+</script>
