@@ -1,15 +1,13 @@
 <script>
   Recurly.config({
-    subdomain: '<%= ENV["RECURLY_SUBDOMAIN"] %>',
+    subdomain: '<%= Recurly.subdomain %>',
     currency: 'USD',
     country: 'US'
   });
 
   Recurly.buildTransactionForm({
     target: '#recurly-transaction',
-    // Signature must be generated server-side with a utility method provided
-    // in client libraries.
-    signature: "<%= Recurly.js.sign( transaction: { amount_in_cents: 19900, currency: 'USD' }) %>",
+    signature: "<%= Recurly.js.sign( transaction: { amount_in_cents: 199_00, currency: 'USD' }) %>",
     successURL: '/accounts/success',
     account: {
       firstName: 'Joe',
