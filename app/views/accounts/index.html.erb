@@ -1,19 +1,19 @@
 <header class="section fullimg">
     <div class="container">
         <h1>PadProof</h1>
-        <h2>Show, Share and Sell photos to your clients<br /> </h2> <h3>The Worlds Most Powerful iPad Images Sales App</h3>
+        <h2>Show, Share and Sell photos to your clients<br /> </h2> <h3>The Worlds Most Powerful Photo Sales App</h3>
         <div class="row section marketing">
             <div class="col six">
                 <h2>The app you’ve been waiting for…</h2>
-                <h4>Lightning fast print sales. <br />
-                    More refferals. <br />
-                    Direct deposit profits. <br />
-                    <span>Custom branded for your studio.</span>
+                <h4>Book <strong>more</strong> clients <br />
+                    Sell <strong>more</strong> products <br />
+                    Get <strong>more</strong> referrals<br />
+                    <span>All custom branded to your studio.</span>
                 </h4>
             </div>
 
             <div class="col six">
-                <%= image_tag "/assets/ipad.png" %>
+                <img src="assets/ipad.png" />
             </div>
         </div>
     </div>
@@ -23,15 +23,15 @@
     <div class="container">
         <div class="col four">
             <h4>Sell more products</h4>
-            <p>iPad, iPhone and Android custom apps for your clients. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p>Customizable iPad app for your clients.  <b>Set your own prices on products</b> for your clients.  Choose from <b>over 30 major photo labs</b> with auto fulfillment.</p>
         </div>
         <div class="col four">
             <h4>Share Your Brand</h4>
-            <p>Viral sharing of your brand on Facebook, Twitter and Pinterest. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p>Create an army of clients talking about your work with <b>one tap viral sharing of your brand</b> to Facebook and Twitter.</p>
         </div>
         <div class="col four">
               <h4>Simplify Your Workflow</h4>
-            <p>No More DVDS.  Easy Digital Downloads of Images. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p>No more DVDS.  Easy <b>digital downloads</b> of images for your clients and secure cloud backup for you.</p>
         </div>
     </div>
 </div>
@@ -43,7 +43,7 @@
                 <h2>PadProof is in a closed beta...</h2>
                 <h3>However, early adopters can signup today.</h3>
 
-                <p>Photographers that would like to use the PadProof service right away can sign up for only $199 a year. This exclusive Pro Plan includes <b>unlimited</b> events, automated print fufillment and digital downloads. <a rel="leanModal" name="learnmore" href="#learn"><em>Learn more</em></a></p>
+                <p>Photographers that would like to use the PadProof service right away can sign up for only $199 a year. This exclusive Pro Plan includes <b>unlimited</b> events, <b>unlimited space</b>, automated print fulfillment and digital downloads.</p>
             </div>
 
             <div class="col three cta">
@@ -58,11 +58,9 @@
 
 <div class="section row comingsoon">
     <div class="container">
-        <div class="col three">
-            <a href="#" class="facebook-link">PadProof on Facebook</a>
-        </div>
-        <div class="col three">
-            <a href="#" class="twitter-link">PadProof on Twitter</a>
+        <div class="col six">
+            <a href="https://www.facebook.com/PadProof" class="facebook-link">PadProof on Facebook</a>
+            <a href="https://twitter.com/padproof" class="twitter-link">PadProof on Twitter</a>
         </div>
 
         <div class="col six">
@@ -76,7 +74,6 @@
     </div>
 </div>
 
-
 <footer class="section row">
     <div class="container">
         <div class="col half">
@@ -84,25 +81,9 @@
         </div>
 
         <div class="col half">
-        <!-- <p>&copy; PadProof LLC 2010 - 2013. All rights reserved.</p> -->
         </div>
-
-
     </div>
 </footer>
 
-<div id="learn" class="modal">
-    <p>Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-
-    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-</div>
-<div id="wait" class="modal">
-    Signup form & verbiage
-</div>
-<div id="early" class="modal">
-    <h2>One-time Transaction</h2>
-    <h2>Dollar Amount: $199</h2>
-    <div id="recurly-transaction">
-    </div>
-</div>
-
+<%= render :partial => "wait" %>
+<%= render :partial => "transaction" %>

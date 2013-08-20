@@ -1,0 +1,57 @@
+// Variables
+@lightBlue: #eef8fd;
+@darkBlue: #1A3148;
+@blue: #024A65;
+
+@twitter: #00acee;
+@facebook: #3b5998;
+
+@primary-color: #3c5664;
+@secondary-color: #ADDED0;
+@slate: #4E4E4E;
+@brick: #E74C3C;
+
+@museo: "museo", "Helvetica Neue", helvetica, sans-serif;
+@museosans:  "museo-sans", "Museo Sans", "Helvetica Neue", helvetica, sans-serif;
+@montserrat:  "Montserrat", "museo-sans", "Helvetica Neue", helvetica, sans-serif;
+
+
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+
+.modal {
+	overflow: scroll;
+	height: 80%;
+	width: 600px;
+	padding: 30px; 
+	display:none;
+	background: #FFF;
+	.border-radius(5px); 
+	.box-shadow(0px 0px 4px rgba(0,0,0,0.7));
+}
+
+.social-links { 
+	//width: 49%;
+	padding: 10px;
+	font-size: 12px;
+	font-family: @montserrat;
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+	color: white;
+	float: left;
+	.box-sizing(border-box);
+	.border-radius(4px);
+	&:hover {
+		text-decoration: none;
+		.opacity (0.9);
+	}
+}

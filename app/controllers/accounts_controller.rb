@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
 	def index
-		@signature = Recurly.js.sign(:transaction => { :amount_in_cents => 50_00, :currency => 'USD' })
+#		@signature = Recurly.js.sign(:transaction => { :amount_in_cents => 50_00, :currency => 'USD' })
 		
 		respond_to do |format|
 			format.html

@@ -1,2 +1,7 @@
 == PadProof Early Subscriber Page
 A work in progress using Recurly to take payments for an early-bird subscription to an up and coming service for Photographers.
+
+
+* run `bundle install`
+* to start server: `rails s`
+* localhost:3000

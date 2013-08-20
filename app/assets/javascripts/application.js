@@ -11,9 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery_ujs
-//= require_tree .
-
-$(function() {
-	$('a[rel*=leanModal]').leanModal({ top : 20 });		
-});
+//= require jquery.leanModal.min.js
+//= require default.js
+//= require recurly.min.js

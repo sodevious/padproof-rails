@@ -1,29 +1,13 @@
+@import "mixins.less"; // Import the base mixins
 @import "base.less"; // Import the base css
+@import "atoms.less"; // Import atoms
+
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-//* { background: rgba(0,0,0,0.1);}
-
-@lightBlue: #eef8fd;
-@darkBlue: #1A3148;
-@blue: #024A65;
-
-@twitter: #00acee;
-@facebook: #3b5998;
-
-@primary-color: #3c5664;
-@secondary-color: #ADDED0;
-@slate: #4E4E4E;
-@brick: #E74C3C;
-
-@museo: "museo", "Helvetica Neue", helvetica, sans-serif;
-@museosans:  "museo-sans", "Museo Sans", "Helvetica Neue", helvetica, sans-serif;
-@montserrat:  "Montserrat", "museo-sans", "Helvetica Neue", helvetica, sans-serif;
-
+// * { background: rgba(0,0,0,0.1);}
 
 div { box-sizing: border-box; }
 img { width: 100%; }
-.hide { display: none; }
-.show { display: block; }
 
 // Start Styles
 body {
@@ -70,7 +54,7 @@ header {
 }
 
 .fullimg {
-	background-image: url("/assets/ocean.jpg");
+	background-image: url("../assets/ocean.jpg");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
@@ -142,11 +126,13 @@ header {
 		padding: 10px 15px 0px 15px;
 		.box-shadow(0px 1px 5px rgba(0,0,0,0.1));
 		.border-radius(4px);
-		a { font-size: 14px; }
+		a { font-size: 14px;   }
 		
 		.cta a {
 			text-align: center;
+			width: 100%;
 			display: block;
+			 margin-bottom: 1.2em; 
 		}
 		.cta-link {
 			.social-links;
@@ -156,6 +142,7 @@ header {
 			font-size: 18px;
 			margin-top: 6px;
 			margin-bottom: 1em;
+
 		}
 	}
 	h2 {
@@ -227,6 +214,7 @@ header {
 	.facebook-link {
 		.social-links;
 		background-color: @facebook;
+		margin-right: 2%;
 		box-shadow: 0px 3px 0px darken(@facebook, 8%);
 	}
 	.twitter-link {
@@ -253,56 +241,5 @@ footer {
 	color: @slate;
 }
 
-// Layout Stuff 
-.social-links { 
-	width: 100%;
-	padding: 10px;
-	font-size: 12px;
-	display: block;
-	color: white;
-	text-align: center;
-	font-family: @montserrat;
-	text-transform: uppercase;
-	.box-sizing(border-box);
-	.border-radius(4px);
-	&:hover {
-		text-decoration: none;
-		.opacity (0.9);
-	}
-}
 
-#lean_overlay {
-    position: fixed;
-    z-index:100;
-    top: 0px;
-    left: 0px;
-    height:100%;
-    width:100%;
-    background: #000;
-    display: none;
-}
-
-.modal {
-	overflow: scroll;
-	height: 80%;
-	width: 600px;
-	padding: 30px; 
-	display:none;
-	background: #FFF;
-	.border-radius(5px); 
-	.box-shadow(0px 0px 4px rgba(0,0,0,0.7));
-}
-
-@media only screen and (min-width: @tablet-breakpoint) and (max-width: @desktop-breakpoint) {
-	* { background: rgba(255,255,0,0.1); }
-
-	header {
-		h2 { font-size: 1.7em; }
-		h3 { font-size: 1.7em; padding-bottom: 30px; }
-	}
-	
-}
-
-@media only screen and (max-width: @mobile-breakpoint) {
-	* { background: rgba(0,255,0,0.1); }
-}
+@import "responsive.less"; // Import the base css
