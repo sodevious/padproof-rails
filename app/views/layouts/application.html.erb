@@ -1,0 +1,69 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>PadProof | The photos you want, in the palm of your hand.</title>
+    <meta name="description" content="PadProof, a proofing app for the moments that matter, built to go anywhere you do.">
+    <meta name="viewport" content="width=device-width">
+
+     <%= stylesheet_link_tag    "application", :media => "all" %>
+     <%= javascript_include_tag "application" %>
+     <%= csrf_meta_tags %>
+    <!-- <link rel="stylesheet" href="assets/stylesheets/pure-min.css">
+    <link rel="stylesheet" href="assets/stylesheets/style.css"> -->
+
+    <!-- Recurly include -->
+    <link rel="stylesheet" href="assets/stylesheets/recurly.css" type="text/css" /> 
+
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+
+    <script type="text/javascript" src="//use.typekit.net/opv1yen.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/javascripts/jquery-1.9.1.min.js"><\/script>')</script>
+
+
+<script>
+  Recurly.config({
+    subdomain: 'recurlyjsdemo-test',
+    currency: 'USD',
+    country: 'US'
+  });
+
+  Recurly.buildTransactionForm({
+    target: '#recurly-transaction',
+    // Signature must be generated server-side with a utility method provided
+    // in client libraries.
+    signature: '<%= @signature %>',
+    successURL: '/account/sign-up',
+    account: {
+      firstName: 'Joe',
+      lastName: 'User',
+      email: 'test@example.net',
+      phone: '555-555-5555',
+      companyName: 'Acme'
+    },
+    billingInfo: {
+      firstName: 'Joe',
+      lastName: 'User',
+      address1: '123 somestreet',
+      address2: '45',
+      city: 'San Francisco',
+      zip: '94107',
+      state: 'CA',
+      country: 'US',
+      cardNumber: '4111-1111-1111-1111',
+      CVV: '123'
+    }
+  });
+</script>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
