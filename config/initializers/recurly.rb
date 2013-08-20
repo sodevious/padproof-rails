@@ -1,5 +1,11 @@
-Recurly.subdomain        = ENV['RECURLY_SUBDOMAIN']
-Recurly.api_key          = ENV['RECURLY_API_KEY']
-Recurly.js.private_key   = ENV['RECURLY_JS_PRIVATE_KEY']
+if Rails.env.production? then
+  Recurly.subdomain        = ENV['RECURLY_SUBDOMAIN']
+  Recurly.api_key          = ENV['RECURLY_API_KEY']
+  Recurly.js.private_key   = ENV['RECURLY_JS_PRIVATE_KEY']
+else
+  Recurly.subdomain      = "subdomain"
+  Recurly.api_key        = "api-key"
+  Recurly.js.private_key = "private-key"
+end
 
 # Recurly.default_currency = 'USD'
